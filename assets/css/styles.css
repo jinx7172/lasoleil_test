@@ -1,0 +1,172 @@
+/* assets/css/styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+:root {
+    --rosa-pastel: #fff0f5;
+    --rosa-fuerte: #ffb6c1;
+    --rosa-oscuro: #d87093;
+    --texto: #5d4037;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--rosa-pastel);
+    color: var(--texto);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: var(--rosa-fuerte);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 { margin: 0; 
+    color: white; 
+    text-shadow: 2px 2px 4px var(--rosa-oscuro); 
+}
+
+.header-btns { position: absolute; 
+    right: 20px; 
+    top: 25px; 
+    display: flex; 
+    gap: 10px; 
+}
+
+.btn-header { background: white; 
+    color: var(--rosa-oscuro); 
+    padding: 10px 15px; text-decoration: none; 
+    border-radius: 20px; font-weight: bold; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); 
+}
+
+.btn-header:hover { background: #ffe4e1; 
+}
+
+/* Contenedores y Grillas */
+.container { max-width: 1000px; 
+    margin: 20px auto; 
+    padding: 20px; 
+}
+
+.grid {  display: grid;  
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));  
+    gap: 20px;  justify-content: center; 
+}
+
+/* Tarjetas de Producto */
+.card { 
+    background: white; 
+    border-radius: 15px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    display: flex; 
+    flex-direction: column; 
+    max-width: 300px; /* Evita que se estire al infinito si hay 1 solo producto */
+    margin: 0 auto;   /* Centra la tarjeta */
+}
+
+.card img { 
+    width: 100%; 
+    height: 180px; 
+    object-fit: cover; /* Recorta la imagen sin deformarla */
+}
+
+.card-content { padding: 15px; 
+    display: flex; 
+    flex-direction: column; 
+    flex-grow: 1; 
+}
+
+.card h3 { margin: 0 0 10px 0; 
+    color: var(--rosa-oscuro); 
+    font-size: 1.1em; 
+}
+
+.card p { font-size: 0.9em; 
+    color: #666; 
+    flex-grow: 1; 
+    margin-bottom: 10px; 
+}
+
+.categoria-tag { font-size: 0.75em; 
+    background: #ffe4e1; 
+    color: var(--rosa-oscuro); 
+    padding: 3px 8px; 
+    border-radius: 10px; 
+    display: inline-block; 
+    margin-bottom: 10px; 
+    width: fit-content;
+}
+
+.precio { font-weight: bold; 
+    color: #ff69b4; 
+    font-size: 1.2em; 
+    margin-bottom: 10px; 
+}
+
+/* Botones */
+
+.btn { display: inline-block; 
+    padding: 8px 15px; 
+    background: #ff69b4; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    border: none; 
+    cursor: pointer; 
+    text-align: center; 
+    font-family: inherit; 
+    font-weight: bold;
+}
+
+.btn:hover { background: var(--rosa-oscuro); 
+}
+
+.btn-add { display: block; 
+    text-align: center; 
+    background: #ff69b4; 
+    color: white; 
+    text-decoration: none; 
+    padding: 8px; 
+    border-radius: 5px; 
+    font-weight: bold; 
+}
+
+.btn-add:hover { background: var(--rosa-oscuro); 
+}
+
+/* Filtros */
+.filtros { text-align: center; 
+    margin-bottom: 20px; 
+}
+
+.filtros a { display: inline-block; 
+    padding: 8px 15px; 
+    margin: 5px; 
+    background: white; 
+    color: var(--rosa-oscuro); 
+    text-decoration: none; 
+    border-radius: 20px; 
+    border: 1px solid var(--rosa-fuerte); 
+    font-weight: bold; 
+}
+
+.filtros a.active { background: var(--rosa-oscuro); 
+    color: white; 
+}
+
+/* Formularios */
+.form-container { max-width: 500px; margin: 50px auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; font-weight: bold; margin-bottom: 5px; }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px; border: 1px solid var(--rosa-fuerte); border-radius: 5px; box-sizing: border-box; font-family: inherit;}
+
+/* Tablas */
+table { width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden;}
+th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ffe4e1; }
+th { background: var(--rosa-fuerte); color: white; }
